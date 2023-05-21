@@ -1,12 +1,21 @@
 body {
   font-family: 'Roboto-Regular';
   width: 100wh;
+  max-width: 1280px;
 }
 
-.article-title {
+@mixin title_for_article ($color) {
   font-size: 28px;
   line-height: 32px;
-  color: #111111;
+  color: #333333;
+}
+
+.article-title--light-black {
+  @include title_for_article(#333333)
+}
+
+.article-title--black {
+  @include title_for_article(#111111)
 }
 
 .article-description {
@@ -20,10 +29,9 @@ body {
     padding: 48px 48px 40px 48px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
   &__content {
-    margin-bottom: 36px;
   }
   &__article-description {
     font-family: 'Roboto-Bold';
@@ -78,7 +86,7 @@ body {
 
 .article {
   &__body {
-    padding: 0 48px 0 48px;
+    margin: 0 48px 48px 48px;
   }
   &__title {
     padding-bottom: 16px;
@@ -87,21 +95,32 @@ body {
       padding-bottom: 2px;
     }
   }
+  &__title--big-padding {
+    padding-top: 28px;
+  }
   &__link {
   color: #597DB3;
   text-decoration: none;
   border-bottom: 1px solid #336FEE;
   }
   &__description {
-    padding-bottom: 48px;
+    margin-bottom: 48px;
   }
   &__list {
     padding: 0;
     li {
+      font-size: 17px;
+      line-height: 28px;
       list-style-position: inside;
       padding-bottom: 16px;
     }
   }
+  &__list--big-padding {
+    li {
+      padding-bottom: 36px;
+    }
+  }
+
   &__list--arrow {
     list-style-type: '👉';
   }
@@ -112,7 +131,8 @@ body {
 
 .footer {
   &__body {
-    padding: 0 48px 48px 48px;
+    padding: 0 48px 50px 48px;
+    margin-top: -18px;
   }
   &__author-info {
     display: flex;
@@ -127,7 +147,7 @@ body {
   }
   &__author-name {
     font-family: 'Roboto-Bold';
-    font-size: 15px;
+    font-size: 14px;
     line-height: 20px;   
     color: #333333;
   }

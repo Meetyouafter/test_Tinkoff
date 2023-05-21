@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.min.css" />
-    <title>Landing</title>
+    <title>ЖилфондСервис</title>
   </head>
   <body>
     <header class="header">
@@ -34,7 +34,7 @@
     <main>
       <article class="article">
         <div class="article__body">
-          <h2 class="article__title article-title">Бизнес</h2>
+          <h2 class="article__title article-title--light-black">Бизнес</h2>
           <p class="article__description article-description">
             ЖилфондСервис помогает с автоматизацией в сфере ЖКХ. Он работает с
             крупными управляющими компаниями, небольшими ТСЖ и
@@ -45,7 +45,7 @@
 
       <article class="article">
         <div class="article__body">
-          <h2 class="article__title article-title">Задачи</h2>
+          <h2 class="article__title article-title--light-black">Задачи</h2>
           <p class="article__description article-description">
             Одна из потребностей клиентов ЖилфондСервиса — сделать так, чтобы
             как можно больше жителей платили без задержек. От этого зависит
@@ -72,7 +72,7 @@
             онлайн. Кроме самого факта оплаты, партнер должен был решить такие
             задачи:
           </p>
-          <ul class="article__list article__list--arrow">
+          <ul class="article__list article__list--big-padding article__list--arrow">
             <li>
               <b
                 >За один перевод оплатить сразу всем операторам коммунальных
@@ -101,7 +101,7 @@
 
       <article class="article">
         <div class="article__body">
-          <h2 class="article__title article-title">
+          <h2 class="article__title article__title--big-padding article-title--black">
             Решение
             <img src="/assets/images/arrow.svg" />
             <a class="article__link" href="#">Тинькофф Касса</a>
@@ -133,7 +133,7 @@
 
       <article class="article">
         <div class="article__body">
-          <h2 class="article__title article-title">Результат</h2>
+          <h2 class="article__title article-title--light-black">Результат</h2>
           <p class="article__description article-description">
             «Квартплата онлайн» — сервис, который помогает компаниям в сфере ЖКХ
             повысить собираемость платежей. Для этого он умеет напоминать об
@@ -145,7 +145,7 @@
 
       <article class="article">
         <div class="article__body">
-          <h2 class="article__title article-title">
+          <h2 class="article__title article-title--black">
             «С интеграцией справились меньше чем за неделю»
           </h2>
           <p class="article__description article-description">
@@ -167,11 +167,15 @@
     <footer class="footer">
       <div class="footer__body">
         <div class="footer__author-info">
-          <img class="footer__author-image" src="/assets/images/avatar.png" />
+          <picture>
+            <source srcset="/assets/images/avatar.webp" type="image/webp">
+            <source srcset="/assets/images/avatar.jpg" type="image/jpeg"> 
+            <img src="/assets/images/avatar.jpg" alt="author avatar">
+          </picture>
           <div class="footer__author-content">
             <p class="footer__author-name">Ирина Иванова</p>
             <p class="footer__author-post">
-              Собственник компаниии и руководитель
+              Собственник компаниии <br> и руководитель
             </p>
           </div>
         </div>
