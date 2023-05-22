@@ -1,0 +1,62 @@
+.footer {
+  &__body {
+    padding: 0 48px 50px 48px;
+    margin-top: -18px;
+    @media screen and (min-width: 321px) and (max-width: 1279px) {
+      padding: 0 48px 48px 48px;
+    }
+    @media screen and (max-width: 320px) {
+      padding: 0 24px 36px 24px;
+    }
+  }
+  &__author-info {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 288px;
+  }
+  &__author-image {
+    width: 64px;
+    height: 64px;
+    img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+  &__author-name {
+    font-family: 'Roboto-Bold';
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+  }
+  &__author-post {
+    font-size: 15px;
+    line-height: 20px;
+    color: #808c9e;
+  }
+  &__description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 48px;
+    @media screen and (max-width: 320px) {
+      padding-top: 36px;
+      align-items: flex-start;
+      flex-direction: column;
+      row-gap: 8px;
+    }
+  }
+  &__editor {
+    font-size: 15px;
+    line-height: 20px;
+    color: #808c9e;
+  }
+  &__link {
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #597db3;
+    border-bottom: 1px solid #597db3;
+  }
+}

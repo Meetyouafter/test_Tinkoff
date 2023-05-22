@@ -1,0 +1,33 @@
+body {
+  font-family: 'Roboto-Regular';
+  width: 100wv;
+  height: auto;
+  max-width: 784px;
+  margin: 80px auto;
+  background: #ffffff;
+  border: 1px solid #dce2e8;
+
+  @media screen and (min-width: 1280px) {
+    max-width: 784px;
+  }
+  @media screen and (min-width: 321px) and (max-width: 1279px) {
+    max-width: 608px;
+  }
+  @media screen and (max-width: 320px) {
+    max-width: 288px;
+  }
+}
+
+.block-for-large-display {
+  display: block;
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+}
+
+.block-for-small-display {
+  display: none;
+  @media screen and (max-width: 1279px) {
+    display: block;
+  }
+}

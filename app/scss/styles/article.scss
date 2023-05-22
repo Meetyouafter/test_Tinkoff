@@ -1,0 +1,110 @@
+@mixin title_for_article($color) {
+  font-size: 28px;
+  line-height: 32px;
+  color: #333333;
+  @media screen and (max-width: 1279px) {
+    font-size: 21px;
+    line-height: 28px;
+  }
+}
+
+.article-title--light-black {
+  @include title_for_article(#333333);
+}
+
+.article-title--black {
+  @include title_for_article(#111111);
+}
+
+.article-description {
+  font-size: 17px;
+  line-height: 28px;
+  color: #333333;
+  @media screen and (max-width: 1279px) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.article {
+  &__body {
+    margin: 0 48px 48px 48px;
+    @media screen and (max-width: 320px) {
+      margin: 0 24px 36px 24px;
+    }
+  }
+  &__title {
+    padding-bottom: 16px;
+    @media screen and (max-width: 1279px) {
+      padding-bottom: 12px;
+    }
+    img {
+      display: inline;
+      padding-bottom: 2px;
+    }
+  }
+  &__title--big-padding-top {
+    padding-top: 28px;
+    @media screen and (max-width: 1279px) {
+      padding-top: 0;
+    }
+  }
+  &__title--small-padding-right {
+    margin-right: -7px;
+  }
+  &__title--small-padding-top-for-sm {
+    @media screen and (max-width: 320px) {
+      margin-top: -40px;
+    }
+  }
+  &__title--small-padding-bottom-for-sm {
+    @media screen and (max-width: 320px) {
+      padding-bottom: 4px;
+    }
+  }
+  &__link {
+    color: #597db3;
+    text-decoration: none;
+    border-bottom: 1px solid #336fee;
+    @media screen and (max-width: 320px) {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+  }
+  &__description {
+    margin-bottom: 32px;
+    font-size: 17px;
+    line-height: 28px;
+    @media screen and (max-width: 1279px) {
+      margin-bottom: 24px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+  &__list {
+    padding: 0;
+    li {
+      font-size: 17px;
+      line-height: 28px;
+      color: #333333;
+      list-style-position: inside;
+      padding-bottom: 16px;
+      @media screen and (max-width: 1279px) {
+        font-size: 15px;
+        line-height: 24px;
+      }
+    }
+  }
+  &__list--big-padding {
+    li {
+      padding-bottom: 36px;
+    }
+  }
+
+  &__list--arrow {
+    list-style-type: '👉';
+  }
+  &__list--check {
+    list-style-type: '✅';
+  }
+}
